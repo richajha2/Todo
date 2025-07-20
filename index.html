@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To Do App</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="scripts/services/task_operations.js"></script>
+  <script defer src="model/js/tasks.js"></script>
+  <script defer src="controller/task-controller.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>To Do App</h1>
+    <div class="form">
+      <label>Id</label><input type="text" id="taskId" readonly value="1" />
+      <label>Name</label><input type="text" id="taskName" placeholder="Type Name Here"/>
+      <label>Desc</label><textarea id="taskDesc"></textarea>
+      <label>Date</label><input type="date" id="taskDate" />
+      <label>Time</label><input type="time" id="taskTime" />
+      <label>Photo</label><input type="text" id="taskPhoto" placeholder="Photo URL"/>
+    </div>
+    <div class="buttons">
+      <button onclick="addTask()">ADD</button>
+      <button onclick="deleteTask()">DELETE</button>
+      <button onclick="updateTask()">UPDATE</button>
+      <button onclick="saveTasks()">SAVE</button>
+      <button onclick="clearFields()">CLEAR FIELDS</button>
+      <input type="text" id="searchBox" placeholder="SEARCH">
+    </div>
+    <div id="taskSummary"></div>
+    <table id="taskTable">
+      <thead>
+        <tr><th>Name</th><th>Desc</th><th>Date</th><th>Time</th><th>Photo</th><th>Operations</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</body>
+</html>
